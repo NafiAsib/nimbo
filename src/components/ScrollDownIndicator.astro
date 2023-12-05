@@ -1,0 +1,177 @@
+---
+
+---
+
+<script>
+  const scrollIndicator = document.getElementById("scroll-indicator");
+  const sections = document.querySelectorAll("section");
+  let timeout: number | undefined;
+
+  window.addEventListener("scroll", () => {
+    clearTimeout(timeout); // Clear the existing timeout on new scroll event
+
+    const currentSectionIndex = getCurrentSectionIndex();
+    if (scrollIndicator) {
+      // Not the last section
+      if (currentSectionIndex !== sections.length - 1) {
+        scrollIndicator.style.opacity = "1";
+        scrollIndicator.style.display = "block";
+        timeout = setTimeout(() => {
+          scrollIndicator.style.opacity = "0";
+          setTimeout(() => (scrollIndicator.style.display = "none"), 500);
+        }, 5000); // Hide after 5 seconds
+      } else {
+        scrollIndicator.style.opacity = "0";
+        setTimeout(() => (scrollIndicator.style.display = "none"), 500);
+      }
+    }
+  });
+
+  function getCurrentSectionIndex() {
+    let currentSectionIndex = 0;
+    sections.forEach((section, index) => {
+      const sectionTop = section.getBoundingClientRect().top;
+      if (sectionTop < window.innerHeight / 2) {
+        currentSectionIndex = index;
+      }
+    });
+    return currentSectionIndex;
+  }
+</script>
+
+<div
+  class="fixed right-2 bottom-5 opacity-100 transition-opacity duration-300 ease-out"
+  id="scroll-indicator"
+>
+  <div class="mouse"></div>
+</div>
+
+<style>
+  .mouse {
+    width: 25px;
+    height: 45px;
+    border: 2px solid #333;
+    border-radius: 30px;
+    position: relative;
+    &::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #333;
+      border-radius: 50%;
+      opacity: 1;
+      animation: wheel 2s infinite;
+      -webkit-animation: wheel 2s infinite;
+    }
+  }
+
+  @keyframes wheel {
+    to {
+      opacity: 0;
+      top: 30px;
+    }
+  }
+
+  @-webkit-keyframes wheel {
+    to {
+      opacity: 0;
+      top: 30px;
+    }
+  }
+
+  /* .scroll {
+	width: 60px;
+	height: 60px;
+	border: 2px solid #333;
+	border-radius: 50%;
+	position: relative;
+	animation: down 1.5s infinite;
+	-webkit-animation: down 1.5s infinite;
+	&::before {
+		content: '';
+		position: absolute;
+		top: 15px;
+		left: 18px;
+		width: 18px;
+		height: 18px;
+		border-left: 2px solid #333;
+  	border-bottom: 2px solid #333;
+		transform: rotate(-45deg);
+	}
+}
+
+@keyframes down {
+	0% {
+		transform: translate(0);
+	}
+	20% {
+		transform: translateY(15px);
+	}
+	40% {
+		transform: translate(0);
+	}
+}
+
+@-webkit-keyframes down {
+	0% {
+		transform: translate(0);
+	}
+	20% {
+		transform: translateY(15px);
+	}
+	40% {
+		transform: translate(0);
+	}
+}
+
+.arrow {
+	width: 0;
+	height: 40px;
+	border: 1px solid #333;
+	position: relative;
+	animation: scroll 1.5s infinite;
+	-webkit-animation: scroll 1.5s infinite;
+	&::after {
+		content: '';
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: -5px;
+    width: 1px;
+    height: 10px;
+		
+		// triangle
+    border-top: 10px solid #333;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+	}
+}
+
+@keyframes scroll {
+	0% {
+		height: 40px;
+	}
+	30% {
+		height: 70px;
+	}
+	60% {
+		height: 40px;
+	}
+}
+
+@-webkit-keyframes scroll {
+	0% {
+		height: 40px;
+	}
+	30% {
+		height: 70px;
+	}
+	60% {
+		height: 40px;
+	}
+} */
+</style>
