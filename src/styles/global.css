@@ -1,0 +1,17 @@
+:root {
+  --primary-text-color: 0 0 0;
+  --primary-bg-color: 243 236 236;
+}
+
+html {
+  font-family: "Poppins", system-ui, sans-serif !important;
+  scroll-behavior: smooth;
+  padding-bottom: 2rem;
+  scroll-snap-type: y mandatory;
+  scroll-padding-top: 1rem;
+}
+
+section {
+  scroll-snap-align: start;
+  scroll-snap-stop: normal;
+}
