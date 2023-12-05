@@ -1,0 +1,28 @@
+---
+const links = [
+  {
+    name: "Experience",
+    url: "#experience",
+  },
+  {
+    name: "Projects",
+    url: "#projects",
+  },
+  {
+    name: "Blog",
+    url: "https://blog.nafiasib.com",
+  },
+];
+---
+
+<nav>
+  <ul class="flex gap-x-8">
+    {
+      links.map((link) => (
+        <li class="text-lg hover:border-b-2 border-gray-400 transition-all duration-150 ease-out">
+          <a href={link.url}>{link.name}</a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>
