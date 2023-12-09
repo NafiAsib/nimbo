@@ -1,8 +1,10 @@
 ---
 import "@fontsource/poppins";
-import "@/styles/global.css";
+
 import TailwindIndicator from "@/components/TailwindIndicator.astro";
 import ScrollDownIndicator from "@/components/ScrollDownIndicator.astro";
+
+import "@/styles/global.css";
 interface Props {
   title: string;
 }
@@ -24,10 +26,9 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="bg-primary-background text-primary-text">
+  <body class="bg-primary-background text-primary-text relative pb-4">
     <slot />
-    <ScrollDownIndicator />
+    <!-- <ScrollDownIndicator /> -->
     <TailwindIndicator />
   </body>
 </html>
-<!-- <style is:global></style> -->
