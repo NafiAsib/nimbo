@@ -6,7 +6,7 @@
 html {
   font-family: "Poppins", system-ui, sans-serif !important;
   scroll-behavior: smooth;
-  padding-bottom: 2rem;
+  /* padding-bottom: 2rem; */
   scroll-snap-type: y mandatory;
   scroll-padding-top: 1rem;
 }
