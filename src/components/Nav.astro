@@ -19,8 +19,16 @@ const links = [
   <ul class="flex gap-x-8">
     {
       links.map((link) => (
-        <li class="text-lg hover:border-b-2 border-gray-400 transition-all duration-150 ease-out">
-          <a href={link.url}>{link.name}</a>
+        <li
+          class="text-lg hover-underline"
+          aria-label={`Opens ${link.name} of Nafi`}
+        >
+          <a
+            href={link.url}
+            target={link.url.includes("http") ? "_blank" : "_self"}
+          >
+            {link.name}
+          </a>
         </li>
       ))
     }
