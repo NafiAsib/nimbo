@@ -1,20 +1,23 @@
 ---
 import { Image } from "astro:assets";
+import SectionLayout from "@/layouts/SectionLayout.astro";
 import Nav from "@/components/Nav.astro";
 import Links from "@/components/Links.astro";
 ---
 
-<section class="h-screen flex flex-col gap-y-12 items-center justify-center">
-  <header class="flex flex-col gap-y-8 items-center">
-    <Image
-      src={"/assets/avatar.png"}
-      alt={`avatar`}
-      width={`136`}
-      height={`136`}
-    />
-    <h1 class="text-3xl">K. M. Nafi Asib</h1>
-    <h2 class="text-2xl">Hobbyist Maker. Product Engineer</h2>
-  </header>
-  <Nav />
-  <Links />
-</section>
+<SectionLayout>
+  <div class="flex flex-col gap-y-12 items-center justify-center">
+    <header class="flex flex-col gap-y-8 items-center z-30">
+      <Image
+        src={"/assets/avatar.png"}
+        alt={`avatar`}
+        width={`136`}
+        height={`136`}
+      />
+      <h1 class="text-3xl">K. M. Nafi Asib</h1>
+      <h2 class="text-2xl">Hobbyist Maker. Product Engineer</h2>
+    </header>
+    <Nav />
+    <Links />
+  </div>
+</SectionLayout>
