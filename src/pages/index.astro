@@ -1,33 +1,33 @@
 ---
-import Layout from "@/layouts/Layout.astro";
-import Hero from "@/components/Hero.astro";
-import Experinces from "@/components/Experinces.astro";
+import Layout from '@/layouts/Layout.astro'
+import Hero from '@/components/Hero.astro'
+import Experinces from '@/components/Experinces.astro'
 ---
 
 <script>
-  const cursor = document.querySelector("[data-cursor-follow]");
-  window.addEventListener("mousemove", (event) => {
-    const posX = event.clientX;
-    const posY = event.clientY;
+  const cursor = document.querySelector('[data-cursor-follow]')
+  window.addEventListener('mousemove', (event) => {
+    const posX = event.clientX
+    const posY = event.clientY
 
-    const scrollX = document.documentElement.scrollLeft;
-    const scrollY = document.documentElement.scrollTop;
+    const scrollX = document.documentElement.scrollLeft
+    const scrollY = document.documentElement.scrollTop
 
-    const adjustedX = posX + scrollX;
-    const adjustedY = posY + scrollY;
+    const adjustedX = posX + scrollX
+    const adjustedY = posY + scrollY
 
-    const style = `background: radial-gradient(600px at ${adjustedX}px ${adjustedY}px, rgba(228, 193, 68, 0.2), transparent 80%);`;
+    const style = `background: radial-gradient(600px at ${adjustedX}px ${adjustedY}px, rgba(228, 193, 68, 0.2), transparent 80%);`
     if (cursor) {
-      cursor.setAttribute("style", style);
+      cursor.setAttribute('style', style)
     }
-  });
+  })
 </script>
 
-<Layout title="Nimbo | A minimal astro theme">
-  <main class="lg:max-w-2xl mx-auto px-4 lg:px-0">
+<Layout title='Nimbo | A minimal astro theme'>
+  <main class='lg:max-w-2xl mx-auto px-4 lg:px-0'>
     <div
       data-cursor-follow
-      class="pointer-events-none fixed inset-0 z-20 transition duration-300 lg:absolute"
+      class='pointer-events-none fixed inset-0 z-20 transition duration-300 lg:absolute'
     >
     </div>
     <Hero />

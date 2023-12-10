@@ -3,47 +3,47 @@
 ---
 
 <script>
-  const scrollIndicator = document.getElementById("scroll-indicator");
-  const sections = document.querySelectorAll("section");
-  let timeout: number | undefined;
+  const scrollIndicator = document.getElementById('scroll-indicator')
+  const sections = document.querySelectorAll('section')
+  let timeout: number | undefined
 
-  window.addEventListener("scroll", () => {
-    clearTimeout(timeout); // Clear the existing timeout on new scroll event
+  window.addEventListener('scroll', () => {
+    clearTimeout(timeout) // Clear the existing timeout on new scroll event
 
-    const currentSectionIndex = getCurrentSectionIndex();
+    const currentSectionIndex = getCurrentSectionIndex()
     if (scrollIndicator) {
       // Not the last section
       if (currentSectionIndex !== sections.length - 1) {
-        scrollIndicator.style.opacity = "1";
-        scrollIndicator.style.display = "block";
+        scrollIndicator.style.opacity = '1'
+        scrollIndicator.style.display = 'block'
         timeout = setTimeout(() => {
-          scrollIndicator.style.opacity = "0";
-          setTimeout(() => (scrollIndicator.style.display = "none"), 500);
-        }, 5000); // Hide after 5 seconds
+          scrollIndicator.style.opacity = '0'
+          setTimeout(() => (scrollIndicator.style.display = 'none'), 500)
+        }, 5000) // Hide after 5 seconds
       } else {
-        scrollIndicator.style.opacity = "0";
-        setTimeout(() => (scrollIndicator.style.display = "none"), 500);
+        scrollIndicator.style.opacity = '0'
+        setTimeout(() => (scrollIndicator.style.display = 'none'), 500)
       }
     }
-  });
+  })
 
   function getCurrentSectionIndex() {
-    let currentSectionIndex = 0;
+    let currentSectionIndex = 0
     sections.forEach((section, index) => {
-      const sectionTop = section.getBoundingClientRect().top;
+      const sectionTop = section.getBoundingClientRect().top
       if (sectionTop < window.innerHeight / 2) {
-        currentSectionIndex = index;
+        currentSectionIndex = index
       }
-    });
-    return currentSectionIndex;
+    })
+    return currentSectionIndex
   }
 </script>
 
 <div
-  class="fixed right-2 bottom-5 opacity-100 transition-opacity duration-300 ease-out"
-  id="scroll-indicator"
+  class='fixed right-2 bottom-5 opacity-100 transition-opacity duration-300 ease-out'
+  id='scroll-indicator'
 >
-  <div class="mouse"></div>
+  <div class='mouse'></div>
 </div>
 
 <style>
@@ -54,7 +54,7 @@
     border-radius: 30px;
     position: relative;
     &::before {
-      content: "";
+      content: '';
       width: 8px;
       height: 8px;
       position: absolute;

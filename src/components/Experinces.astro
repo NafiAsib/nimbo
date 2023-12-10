@@ -1,91 +1,91 @@
 ---
-import { Image } from "astro:assets";
-import SectionLayout from "@/layouts/SectionLayout.astro";
+import { Image } from 'astro:assets'
+import SectionLayout from '@/layouts/SectionLayout.astro'
 
 const experiences = [
   {
-    title: "Associate Software Developer",
-    company: "4takeaway",
-    location: "Mönchengladbach, North Rhine-Westphalia, Germany",
-    startDate: "May 2023",
-    endDate: "Present",
+    title: 'Associate Software Developer',
+    company: '4takeaway',
+    location: 'Mönchengladbach, North Rhine-Westphalia, Germany',
+    startDate: 'May 2023',
+    endDate: 'Present',
     description:
-      "Developed a social media app with Flutter. Developed a food delivery system. Mentored Junior Software Engineers in Next.js and NestJS",
-    link: "https://www.4takeaway.com/",
-    skills: ["Next.js", "Laravel", "AWS", "Vercel"],
+      'Developed a social media app with Flutter. Developed a food delivery system. Mentored Junior Software Engineers in Next.js and NestJS',
+    link: 'https://www.4takeaway.com/',
+    skills: ['Next.js', 'Laravel', 'AWS', 'Vercel']
   },
   {
-    title: "Associate Software Developer",
-    company: "The WOS Germany GmbH",
-    location: "Mönchengladbach, North Rhine-Westphalia, Germany",
-    startDate: "Nov 2022",
-    endDate: "Present",
+    title: 'Associate Software Developer',
+    company: 'The WOS Germany GmbH',
+    location: 'Mönchengladbach, North Rhine-Westphalia, Germany',
+    startDate: 'Nov 2022',
+    endDate: 'Present',
     description:
-      "Developed a social media app with Flutter. Developed a food delivery system. Mentored Junior Software Engineers in Next.js and NestJS",
-    link: "https://thewos.com/",
-    skills: ["Next.js", "NestJS", "Flutter", "AWS"],
+      'Developed a social media app with Flutter. Developed a food delivery system. Mentored Junior Software Engineers in Next.js and NestJS',
+    link: 'https://thewos.com/',
+    skills: ['Next.js', 'NestJS', 'Flutter', 'AWS']
   },
   {
-    title: "Associate Software Engineer",
-    company: "Brain Station 23",
-    location: "Dhaka, Bangladesh",
-    startDate: "Nov 2021",
-    endDate: "Nov 2022",
-    description: "I worked on the Facebook Search team.",
-    link: "https://brainstation-23.com/",
-    skills: ["React", "Node.js", "Next.js"],
+    title: 'Associate Software Engineer',
+    company: 'Brain Station 23',
+    location: 'Dhaka, Bangladesh',
+    startDate: 'Nov 2021',
+    endDate: 'Nov 2022',
+    description: 'I worked on the Facebook Search team.',
+    link: 'https://brainstation-23.com/',
+    skills: ['React', 'Node.js', 'Next.js']
   },
   {
-    title: "Frontend Developer",
-    company: "Dast Solution Inc.",
-    location: "Texas, US",
-    startDate: "Dec 2020",
-    endDate: "Jun 2021",
-    description: "I worked on the Microsoft Search team.",
-    skills: ["Angular", "Flutter", "Google Cloud Platform", "Django"],
-  },
-];
+    title: 'Frontend Developer',
+    company: 'Dast Solution Inc.',
+    location: 'Texas, US',
+    startDate: 'Dec 2020',
+    endDate: 'Jun 2021',
+    description: 'I worked on the Microsoft Search team.',
+    skills: ['Angular', 'Flutter', 'Google Cloud Platform', 'Django']
+  }
+]
 ---
 
 <SectionLayout>
-  <div class="" id="experience">
-    <h2 class="text-3xl font-bold mb-5">Experience</h2>
-    <ul class="flex flex-col gap-y-8">
+  <div class='' id='experience'>
+    <h2 class='text-3xl font-bold mb-5'>Experience</h2>
+    <ul class='flex flex-col gap-y-8'>
       {
         experiences.map((experience) => (
           // <li class="lg:grid grid-cols-4 justify-normal p-2 rounded-md bg-clip-padding hover:backdrop-filter hover:backdrop-blur-sm hover:bg-opacity-50 hover:border border-white/40">
-          <li class="grid grid-cols-4 justify-normal p-2 rounded-md relative group">
-            <div class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-white/40 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg" />
-            <p class="text-sm col-span-1 italic z-10">
+          <li class='grid grid-cols-4 justify-normal p-2 rounded-md relative group'>
+            <div class='absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-white/40 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg' />
+            <p class='text-sm col-span-1 italic z-10'>
               {experience.startDate} - <br />
               {experience.endDate}
             </p>
-            <div class="col-span-3 z-10">
-              <div class="text-lg">
-                <h4 class="">
-                  {experience.title} · {experience.company}{" "}
+            <div class='col-span-3 z-10'>
+              <div class='text-lg'>
+                <h4 class=''>
+                  {experience.title} · {experience.company}{' '}
                   {experience.link && (
                     <a
                       href={experience.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      target='_blank'
+                      rel='noopener noreferrer'
                     >
                       <Image
-                        src={"/icons/link.svg"}
-                        alt={"link"}
+                        src={'/icons/link.svg'}
+                        alt={'link'}
                         width={15}
                         height={15}
-                        class="inline hover:scale-125 transition-all duration-150 ease-out ml-2"
+                        class='inline hover:scale-125 transition-all duration-150 ease-out ml-2'
                       />
                     </a>
                   )}
                 </h4>
               </div>
-              <h5 class="text-xs italic opacity-60">{experience.location}</h5>
-              <p class="text-sm">{experience.description}</p>
-              <div class="flex flex-wrap gap-2 mt-2">
+              <h5 class='text-xs italic opacity-60'>{experience.location}</h5>
+              <p class='text-sm'>{experience.description}</p>
+              <div class='flex flex-wrap gap-2 mt-2'>
                 {experience.skills.map((skill) => (
-                  <span class="text-sm bg-transparent px-3 py-2 rounded-full border border-gray-300">
+                  <span class='text-sm bg-transparent px-3 py-2 rounded-full border border-gray-300'>
                     {skill}
                   </span>
                 ))}

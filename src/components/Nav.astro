@@ -1,31 +1,31 @@
 ---
 const links = [
   {
-    name: "Experience",
-    url: "#experience",
+    name: 'Experience',
+    url: '#experience'
   },
   {
-    name: "Projects",
-    url: "#projects",
+    name: 'Projects',
+    url: '#projects'
   },
   {
-    name: "Blog",
-    url: "https://blog.nafiasib.com",
-  },
-];
+    name: 'Blog',
+    url: 'https://blog.nafiasib.com'
+  }
+]
 ---
 
 <nav>
-  <ul class="flex gap-x-8">
+  <ul class='flex gap-x-8'>
     {
       links.map((link) => (
         <li
-          class="text-lg hover-underline"
+          class='text-lg hover-underline'
           aria-label={`Opens ${link.name} of Nafi`}
         >
           <a
             href={link.url}
-            target={link.url.includes("http") ? "_blank" : "_self"}
+            target={link.url.includes('http') ? '_blank' : '_self'}
           >
             {link.name}
           </a>
