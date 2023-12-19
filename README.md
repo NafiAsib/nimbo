@@ -7,8 +7,8 @@
 ```
 git clone git@github.com:NafiAsib/nimbo.git
 cd nimbo
-pnpm i
+pnpm install
 pnpm dev
 ```
 
-Open `localhost:4321` in your browser.
+Open [localhost:4321](http://localhost:4321) in your browser.

@@ -1,4 +1,4 @@
-export const experiences = [
+export default [
     {
       title: 'Associate Software Developer',
       company: '4takeaway',
