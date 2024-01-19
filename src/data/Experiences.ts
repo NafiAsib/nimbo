@@ -17,7 +17,7 @@ export default [
       startDate: 'Nov 2022',
       endDate: 'Present',
       description:
-        'Developed a social media app with Flutter. Developed a food delivery system. Mentored Junior Software Engineers in Next.js and NestJS',
+        'Developed a social media app with Flutter. Developed a food delivery system. Mentored Junior Software Engineers in Next.js and NestJS.',
       link: 'https://thewos.com/',
       skills: ['Next.js', 'NestJS', 'Flutter', 'AWS']
     },
@@ -27,7 +27,7 @@ export default [
       location: 'Dhaka, Bangladesh',
       startDate: 'Nov 2021',
       endDate: 'Nov 2022',
-      description: 'I worked on the Facebook Search team.',
+      description: 'Worked in an in-house e-commerce project.',
       link: 'https://brainstation-23.com/',
       skills: ['React', 'Node.js', 'Next.js']
     },
@@ -37,7 +37,7 @@ export default [
       location: 'Texas, US',
       startDate: 'Dec 2020',
       endDate: 'Jun 2021',
-      description: 'I worked on the Microsoft Search team.',
+      description: 'Built an online exam system with Angular. Collaborated with the design team to build a design system & improve product.',
       skills: ['Angular', 'Flutter', 'Google Cloud Platform', 'Django']
     }
   ]
