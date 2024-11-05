@@ -1,7 +1,7 @@
 ---
 import { Image } from 'astro:assets'
 import SectionLayout from '@/layouts/SectionLayout.astro'
-import experiences from "@/data/Experiences.ts"
+import experiences from '@/data/Experiences.ts'
 ---
 
 <SectionLayout>
@@ -39,10 +39,25 @@ import experiences from "@/data/Experiences.ts"
                 </h4>
               </div>
               <h5 class='text-xs italic opacity-60'>{experience.location}</h5>
-              <p class='text-sm'>{experience.description}</p>
+              <ul class='list-disc list-outside ml-3 mt-2'>
+                {experience.description.map((desc) => (
+                  <li class='text-sm'>{desc}</li>
+                ))}
+              </ul>
               <div class='flex flex-wrap gap-2 mt-2'>
                 {experience.skills.map((skill) => (
-                  <span class='text-sm bg-transparent px-3 py-2 rounded-full border border-gray-300'>
+                  <span
+                    class='text-sm px-3 py-2 rounded-full 
+                    border border-gray-300/50
+                    bg-gray-100/10
+                    backdrop-blur-[2px]
+                    transition-all duration-300 
+                    hover:bg-white/20 
+                    hover:backdrop-blur-[6px]
+                    hover:border-white/40
+                    hover:shadow-[0_0_15px_rgba(255,255,255,0.15)]
+                    hover:scale-105'
+                  >
                     {skill}
                   </span>
                 ))}
