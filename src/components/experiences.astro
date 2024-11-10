@@ -2,6 +2,25 @@
 import { Image } from 'astro:assets'
 import SectionLayout from '@/layouts/section-layout.astro'
 import { experiences } from '@/data'
+import linkIcon from '../assets/icons/link.svg'
+
+const calculateDuration = (startDate: string, endDate: string): string => {
+  const start = new Date(startDate)
+  const end =
+    endDate.toLowerCase() === 'present' ? new Date() : new Date(endDate)
+
+  const yearDiff = end.getFullYear() - start.getFullYear()
+  const monthDiff = end.getMonth() - start.getMonth() + 1 // Added +1 here
+
+  let totalMonths = yearDiff * 12 + monthDiff
+  const years = Math.floor(totalMonths / 12)
+  const months = totalMonths % 12
+
+  const yearText = years > 0 ? `${years} yr${years > 1 ? 's' : ''}` : ''
+  const monthText = months > 0 ? `${months} mo${months > 1 ? 's' : ''}` : ''
+
+  return [yearText, monthText].filter(Boolean).join(' ')
+}
 ---
 
 <SectionLayout>
@@ -13,11 +32,11 @@ import { experiences } from '@/data'
           // <li class="lg:grid grid-cols-4 justify-normal p-2 rounded-md bg-clip-padding hover:backdrop-filter hover:backdrop-blur-sm hover:bg-opacity-50 hover:border border-white/40">
           <li class='grid grid-cols-4 justify-normal p-2 rounded-md relative group'>
             <div class='absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-white/40 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg' />
-            <p class='text-sm col-span-1 italic z-10'>
+            <p class='text-sm sm:col-span-1 italic z-10 hidden sm:block'>
               {experience.startDate} - <br />
               {experience.endDate}
             </p>
-            <div class='col-span-3 z-10'>
+            <div class='sm:col-span-3 z-10 col-span-4'>
               <div class='text-lg'>
                 <h4 class=''>
                   {experience.title} · {experience.company}{' '}
@@ -28,7 +47,7 @@ import { experiences } from '@/data'
                       rel='noopener noreferrer'
                     >
                       <Image
-                        src={'/icons/link.svg'}
+                        src={linkIcon}
                         alt={'link'}
                         width={15}
                         height={15}
@@ -39,6 +58,10 @@ import { experiences } from '@/data'
                 </h4>
               </div>
               <h5 class='text-xs italic opacity-60'>{experience.location}</h5>
+              <p class='text-xs italic z-10 sm:hidden pt-1'>
+                {experience.startDate} - {experience.endDate} ·{' '}
+                {calculateDuration(experience.startDate, experience.endDate)}
+              </p>
               <ul class='list-disc list-outside ml-3 mt-2'>
                 {experience.description.map((desc) => (
                   <li class='text-sm'>{desc}</li>
