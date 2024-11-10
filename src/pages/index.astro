@@ -2,6 +2,7 @@
 import Layout from '@/layouts/layout.astro'
 import Hero from '@/components/hero.astro'
 import Experiences from '@/components/experiences.astro'
+import { info } from '@/data'
 ---
 
 <script>
@@ -23,10 +24,11 @@ import Experiences from '@/components/experiences.astro'
   })
 </script>
 
-<Layout title='Nafi Asib | Software Engineer'>
+<Layout title={info.siteTitle} description={info.description} image={info.image}>
   <main class='lg:max-w-2xl mx-auto px-4 lg:px-0'>
     <div
       data-cursor-follow
+      aria-hidden="true"
       class='pointer-events-none fixed inset-0 z-20 transition duration-300 lg:absolute'
     >
     </div>

@@ -1,3 +1,10 @@
+export const site = 'https://nafiasib.com'
+export const info = {
+  name: 'K. M. Nafi Asib',
+  siteTitle: 'Nafi Asib',
+  description: "Hobbyist Maker. Product Engineer",
+  image: 'src/assets/avatar.png'
+}
 export const navLinks = [
   {
     name: 'Experience',
@@ -5,7 +12,7 @@ export const navLinks = [
   },
   {
     name: 'Projects',
-    url: '#projects'
+    url: 'https://github.com/NafiAsib?tab=repositories'
   },
   {
     name: 'Blog',
@@ -44,8 +51,8 @@ export const experiences = [
     startDate: 'Jun 2024',
     endDate: 'Present',
     description: [
-      'Developing a warehouse management system with Go, Angular & Ionic',
-      'Developend and maintained existing systems with Next.js, Express & Typescript'
+      'Developing a scalable warehouse management system with Go, Angular & Ionic',
+      'Developend and maintained legacy systems with Next.js, Express & Typescript'
     ],
     link: 'https://www.cantaloupe.com/solutions/software/cheq-event-management-software/',
     skills: [
@@ -65,9 +72,9 @@ export const experiences = [
     startDate: 'Nov 2022',
     endDate: 'Jun 2024',
     description: [
-      'Developed a food delivery system with Next.js. Led the frontend team',
-      'Created CI/CD pipelines with GitHub Actions, IaC with Pulumi',
-      'Developed a social media app with Flutter',
+      'Led a team of 4 frontend developers in building a high-performance food delivery platform',
+      'Automated deployment workflows (CI/CD) with GitHub Actions and Pulumi',
+      'Developed a social media app MVP with Flutter',
       'Mentored Junior Software Engineers in Next.js and NestJS'
     ],
     link: 'https://thewos.com/',
@@ -79,9 +86,15 @@ export const experiences = [
     location: 'Dhaka, Bangladesh',
     startDate: 'Nov 2021',
     endDate: 'Nov 2022',
-    description: ['Worked in an in-house e-commerce project.'],
+    description: [
+      'Led complete frontend architecture refactoring, implementing modular package design that improved DX and reduced onboarding time',
+      'Engineered core features of an enterprise e-commerce platform using Next.js and NestJS',
+      'Established end-to-end testing culture by implementing Cypress',
+      'Developed and documented a comprehensive component library with Storybook',
+      'Mentored developers in testing best practices and modern frontend architecture patterns'
+    ],
     link: 'https://brainstation-23.com/',
-    skills: ['React', 'Node.js', 'Next.js']
+    skills: ['React', 'Node.js', 'Next.js', 'Lerna']
   },
   {
     title: 'Frontend Developer',
@@ -90,8 +103,8 @@ export const experiences = [
     startDate: 'Dec 2020',
     endDate: 'Jun 2021',
     description: [
-      'Built an online exam system with Angular.',
-      'Collaborated with the design team to build a design system & improve product.'
+      'Architected and implemented a secure online examination platform using Angular, Flutter, Django and GCP',
+      'Spearheaded development of a company-wide design system, reducing UI inconsistencies and accelerating feature development'
     ],
     skills: ['Angular', 'Flutter', 'Google Cloud Platform', 'Django']
   }

@@ -4,6 +4,7 @@ import SectionLayout from '@/layouts/section-layout.astro'
 import Nav from '@/components/nav.astro'
 import Links from '@/components/links.astro'
 import avatar from '../assets/avatar.png'
+import { info } from '@/data'
 ---
 
 <SectionLayout>
@@ -15,11 +16,11 @@ import avatar from '../assets/avatar.png'
         width={`136`}
         height={`136`}
         loading='eager'
-        alt='Avatar of Nafi Asib'
+        alt={`Avatar of ${info.name}`}
       />
 
-      <h1 class='text-3xl'>K. M. Nafi Asib</h1>
-      <h2 class='text-2xl text-center'>Hobbyist Maker. Product Engineer</h2>
+      <h1 class='text-3xl'>{info.name}</h1>
+      <h2 class='text-2xl text-center'>{info.description}</h2>
     </header>
     <Nav />
     <Links />

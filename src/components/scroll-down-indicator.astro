@@ -5,7 +5,7 @@
 <script>
   const scrollIndicator = document.getElementById('scroll-indicator')
   const sections = document.querySelectorAll('section')
-  let timeout: number | undefined
+  let timeout: ReturnType<typeof setTimeout> | undefined
 
   window.addEventListener('scroll', () => {
     clearTimeout(timeout) // Clear the existing timeout on new scroll event
