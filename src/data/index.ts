@@ -26,7 +26,7 @@ export const socialLinks = [
   },
   {
     name: 'twitter',
-    link: 'https://twitter.com/NafiAsib',
+    link: 'https://x.com/NafiAsib',
     icon: 'src/assets/icons/twitter.svg'
   },
   {
