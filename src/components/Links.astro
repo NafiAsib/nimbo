@@ -1,14 +1,13 @@
 ---
 import { Image } from 'astro:assets'
-import links from "@/data/SocialLinks"
-
+import { socialLinks } from '@/data'
 ---
 
 <ul
   class='flex gap-x-10 lg:flex-col gap-y-5 lg:fixed lg:bottom-[10%] lg:left-[10%]'
 >
   {
-    links.map((link) => (
+    socialLinks.map((link) => (
       <li class='hover:scale-110 transform transition-all duration-300 z-30'>
         <a
           href={link.link}

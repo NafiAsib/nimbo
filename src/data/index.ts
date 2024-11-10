@@ -1,4 +1,42 @@
-export default [
+export const navLinks = [
+  {
+    name: 'Experience',
+    url: '#experience'
+  },
+  {
+    name: 'Projects',
+    url: '#projects'
+  },
+  {
+    name: 'Blog',
+    url: 'https://blog.nafiasib.com'
+  }
+]
+
+export const socialLinks = [
+  {
+    name: 'github',
+    link: 'https://github.com/NafiAsib',
+    icon: 'src/assets/icons/github.svg'
+  },
+  {
+    name: 'linkedin',
+    link: 'https://www.linkedin.com/in/nafiasib/',
+    icon: 'src/assets/icons/linkedin.svg'
+  },
+  {
+    name: 'twitter',
+    link: 'https://twitter.com/NafiAsib',
+    icon: 'src/assets/icons/twitter.svg'
+  },
+  {
+    name: 'facebook',
+    link: 'https://www.facebook.com/nafi.asib',
+    icon: 'src/assets/icons/facebook.svg'
+  }
+]
+
+export const experiences = [
   {
     title: 'Software Engineer',
     company: 'Cheq, a Cantaloupe Platform',

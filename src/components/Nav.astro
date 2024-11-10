@@ -1,11 +1,11 @@
 ---
-import links from "@/data/NavLinks"
+import { navLinks } from '@/data'
 ---
 
 <nav>
   <ul class='flex gap-x-8'>
     {
-      links.map((link) => (
+      navLinks.map((link) => (
         <li
           class='text-lg hover-underline'
           aria-label={`Opens ${link.name} of Nafi`}
