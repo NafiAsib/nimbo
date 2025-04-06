@@ -52,14 +52,14 @@ export const experiences = [
   {
     title: 'Software Engineer',
     company: 'Cheq, a Cantaloupe Platform',
-    location: 'Kirkland, Washington',
+    location: 'Kirkland, Washington (Remote)',
     startDate: 'Jun 2024',
     endDate: 'Present',
     description: [
       'Developing a scalable warehouse management system with Go, Angular & Ionic',
-      'Developend and maintained legacy systems with Next.js, Express & Typescript'
+      'Developed and maintained legacy systems with Next.js, Express & Typescript'
     ],
-    link: 'https://www.cantaloupe.com/solutions/software/cheq-event-management-software/',
+    link: 'https://www.cantaloupe.com/',
     skills: [
       'Go',
       'Angular',
@@ -73,14 +73,15 @@ export const experiences = [
   {
     title: 'Software Developer',
     company: 'The WOS Germany GmbH',
-    location: 'Mönchengladbach, North Rhine-Westphalia, Germany',
+    location: 'Mönchengladbach, North Rhine-Westphalia, Germany (Remote)',
     startDate: 'Nov 2022',
     endDate: 'Jun 2024',
     description: [
       'Led a team of 4 frontend developers in building a high-performance food delivery platform',
+      'Developed an in-house component library focused on accessibility and performance',
       'Automated deployment workflows (CI/CD) with GitHub Actions and Pulumi',
       'Developed a social media app MVP with Flutter',
-      'Mentored Junior Software Engineers in Next.js and NestJS'
+      'Mentored Junior engineers in Next.js and NestJS'
     ],
     link: 'https://thewos.com/',
     skills: ['Next.js', 'NestJS', 'Flutter', 'AWS', 'CI/CD']
@@ -99,12 +100,12 @@ export const experiences = [
       'Mentored developers in testing best practices and modern frontend architecture patterns'
     ],
     link: 'https://brainstation-23.com/',
-    skills: ['React', 'Node.js', 'Next.js', 'Lerna']
+    skills: ['React', 'Node.js', 'Next.js', 'Lerna', 'Cypress', 'Storybook']
   },
   {
     title: 'Frontend Developer',
     company: 'Dast Solution Inc.',
-    location: 'Texas, US',
+    location: 'Texas, US (Remote)',
     startDate: 'Dec 2020',
     endDate: 'Jun 2021',
     description: [
