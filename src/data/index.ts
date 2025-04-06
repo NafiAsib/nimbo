@@ -1,3 +1,8 @@
+import githubIcon from '../assets/icons/github.svg'
+import linkedinIcon from '../assets/icons/linkedin.svg'
+import twitterIcon from '../assets/icons/twitter.svg'
+import facebookIcon from '../assets/icons/facebook.svg'
+
 export const site = 'https://nafiasib.com'
 export const info = {
   name: 'K. M. Nafi Asib',
@@ -24,22 +29,22 @@ export const socialLinks = [
   {
     name: 'github',
     link: 'https://github.com/NafiAsib',
-    icon: 'src/assets/icons/github.svg'
+    icon: githubIcon
   },
   {
     name: 'linkedin',
     link: 'https://www.linkedin.com/in/nafiasib/',
-    icon: 'src/assets/icons/linkedin.svg'
+    icon: linkedinIcon
   },
   {
     name: 'twitter',
     link: 'https://x.com/NafiAsib',
-    icon: 'src/assets/icons/twitter.svg'
+    icon: twitterIcon
   },
   {
     name: 'facebook',
     link: 'https://www.facebook.com/nafi.asib',
-    icon: 'src/assets/icons/facebook.svg'
+    icon: facebookIcon
   }
 ]
 
